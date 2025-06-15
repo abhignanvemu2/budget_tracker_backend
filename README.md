@@ -136,10 +136,11 @@ python manage.py seed_budgets --clear --user=testuser
 ```
 
 ### Test Credentials
-
+```
 After seeding:
 - **Username**: `testuser`
 - **Password**: `testpass123`
+```
 
 ## 🔐 Authentication
 
@@ -191,21 +192,6 @@ The API uses JWT (JSON Web Tokens) for authentication:
 - Custom validation rules for financial data
 - Error handling with detailed messages
 
-## 🧪 Testing
-
-### Run Tests
-```bash
-python manage.py test
-```
-
-### Test Coverage
-```bash
-pip install coverage
-coverage run --source='.' manage.py test
-coverage report
-coverage html 
-```
-
 ### API Testing
 Use Django REST Framework's browsable API at `http://localhost:8000/api/`
 
@@ -215,11 +201,6 @@ Use Django REST Framework's browsable API at `http://localhost:8000/api/`
 - Proper indexing on frequently queried fields
 - Select related for foreign key relationships
 - Pagination to limit query results
-
-### Caching (Optional)
-- Redis integration ready
-- Cache configuration in settings
-- API response caching for expensive queries
 
 ### Query Optimization
 - Efficient database queries
