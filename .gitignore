@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Django
+*.log
+*.pot
+*.pyc
+*.mo
+*.db
+*.sqlite3
+*.sqlite3-journal
+*.swp
+*.swo
+db.sqlite3
+.env
+.env.*
+
+# Django media/static (optional if generated/collected)
+media/
+staticfiles/
+static/
+
+# Virtualenv
+venv/
+ENV/
+env/
+.venv/
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# PyCharm
+.idea/
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+
+# Migrations (optional – include if you don’t want to track them)
+**/migrations/*.pyc
+**/migrations/__pycache__/
+# Comment the next line if you want to keep migration files in git
+**/migrations/*.py
+
+# Node modules (if used)
+node_modules/
+
+# Other
+*.bak
+*.tmp
+*.log
+*.orig
