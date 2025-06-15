@@ -4,6 +4,8 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 from .serializers import UserRegistrationSerializer, UserLoginSerializer, UserSerializer
+from django.db import connection
+from django.http import JsonResponse
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
@@ -38,3 +40,12 @@ def login(request):
 def profile(request):
     serializer = UserSerializer(request.user)
     return Response(serializer.data)
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def db_health_check(request):
+    try:
+        connection.ensure_connection()
+        return JsonResponse({"status": "connected"})
+    except Exception as e:
+        return JsonResponse({"status": "error", "detail": str(e)}, status=500)
