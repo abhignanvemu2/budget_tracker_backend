@@ -124,5 +124,5 @@ SIMPLE_JWT = {
 }
 
 # CORS configuration
-CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='http://localhost:5173').split(',')
+CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='https://budget-tracker-frontend-gamma.vercel.app/').split(',')
 CORS_ALLOW_CREDENTIALS = True
